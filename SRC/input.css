@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sec1{
+	background-image: url("./sabrinaimg/1\ 50502083__2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.sec9{
+	background-image: url("./sabrinaimg/1088\ 1.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
