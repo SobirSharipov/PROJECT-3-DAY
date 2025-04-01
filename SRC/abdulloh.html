@@ -9,62 +9,389 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
+    <style>
+        input[type="range"] {
+            @apply appearance-none w-full h-2 bg-gray-300 rounded-lg outline-none;
+            background: linear-gradient(to right, #3b82f6 0%, #3b82f6 50%, #d1d5db 50%, #d1d5db 100%);
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            @apply appearance-none w-6 h-6 bg-blue-500 rounded-full cursor-pointer;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            @apply w-6 h-6 bg-blue-500 rounded-full cursor-pointer;
+        }
+    </style>
 </head>
 
 <body class="px-[15px]">
-    <header></header>
-
-    <main>
-        <div
-            class="bg-[url(img-aba/back.png)] rounded-tr-[25px] rounded-tl-[25px] p-5 md:pt-5 md:pl-[190px] md:pb-10 md:px-[25px] text-white md:w-[1450px] bg-no-repeat md:h-[620px] h-[426px] w-[290px]">
-            <div class="hidden mb-[54px] md:flex gap-5 items-center">
-                <p class="">Главная</p>
-                <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
-                <p class="">Кредит и рассрочка</p>
-                <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
-                <p class="">Семейный автомобиль</p>
+    <header>
+        <div class="md:flex xs:hidden justify-center gap-[10px] my-[20px]">
+            <div class="font-black text-[30px]">
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <p class="text-[30px] md:text-[60px] font-bold">Семейный автомобиль</p>
-            <p class="text-[12px] md:w-[619px] md:text-[20px] font-bold">Программа “Семейный автомобиль” рассчитана на
-                покупателей с одним и более
-                несоверешеннолетними
-                детьми в семье</p>
-            <div
-                class="bg-[#CA0100] mt-[97px] rounded-full pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center gap-[6px] font-bold text-white">
-                <p class="text-[25px] md:text-[68px]">от 1,9%</p>
-                <p class="text-[10px] md:text-[20px]">По льготной <br> ставке</p>
+            <div>
+                <img src="./sobir-img/Group 673.png" alt="">
             </div>
-            <div
-                class="rounded-full mt-[17px] pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center mb-20 gap-[6px] font-bold">
-                <p class="text-[25px] md:text-[68px]">-10%</p>
-                <p class="text-[10px] md:text-[20px]">от стоимости <br>
-                    автомобиля</p>
+            <h1 class="border-2 xs:hidden md:block"></h1>
+            <div class=" md:flex gap-[20px] xs:hidden">
+                <p class="font-bold text-15px]"> <span class="w-[0px] p-[3px] bg-[#CA0100] text-white rounded-2xl">10
+                        лет</span> превосходим <br>
+                    ваши ожидания</p>
+                <p class="text-[#CA0100] my-auto">Подбор авто</p>
+                <p class="my-auto">О компании</p>
+                <p class="my-auto">Техцентр</p>
+                <p class="my-auto">Отзывы</p>
+                <p class="my-auto">Контакты</p>
+            </div>
+            <div class="md:flex xs:hidden">
+                <div>
+                    <img src="./sobir-img/Group (2).png" alt="">
+                </div>
+                <h class="font-bold text-[20px] xs:hidden md:block">+7 (800) 551-94-31 <br> <span
+                        class="font-normal text-[15px] ml-[50px]">+7
+                        (495) 292-18-67</span></h>
+            </div>
+            <div class="my-auto xs:hidden md:block">
+                <button class="w-[200px] p-[9px] bg-[#CA0100] text-white rounded-xl ">Обратный звонок</button>
             </div>
         </div>
-        <div class="p-5 rounded-[25px] border bg-white border-[#E1E1E1] md:py-[34px] md:px-[42px] md:flex mb-10">
-            <div class="mr-[100px]">
-                <p class="text-[20px] md:text-[24px] font-black">Получите <br>
-                    специальную цену</p>
+        <div class="md:flex xs:hidden justify-around my-[20px]">
+            <div class=" xs:hidden md:block">
+                <select name="" id="" class="font-bold text-[20px]">
+                    <option value="Каталог авто">Каталог авто</option>
+                </select>
+            </div>
+            <div class=" xs:hidden md:block">
+                <select name="" id="" class="font-bold text-[20px]">
+                    <option value="Авто с пробегом" class="font-bold text-[25px]">Авто с пробегом</option>
+                </select>
+            </div>
+            <div class=" xs:hidden md:block">
+                <select name="" id="" class="font-bold text-[20px]">
+                    <option value="Кредит и рассрочка" class="font-bold text-[25px]">Кредит и рассрочка</option>
+                </select>
+            </div>
+            <div class=" xs:hidden md:block">
+                <select name="" id="" class="font-bold text-[20px]">
+                    <option value="Кредит и рассрочка" class="font-bold text-[25px]">Кредит и рассрочка</option>
+                </select>
+            </div>
+            <div class="xs:hidden md: block">
+                <p class="font-bold text-[20px]">Такси в кредит</p>
+            </div>
+            <div>
+                <img src="./sobir-img/image.png" alt="" class="md:h-[50px] xs:h-[30px] my-auto">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="">
+            <div
+                class="md:hidden  bg-[url(img-aba/md-back.png)] rounded-tr-[25px] rounded-tl-[25px] p-5 md:pt-5 md:pl-[190px] md:pb-10 md:px-[25px] text-white md:w-[1450px] bg-no-repeat md:h-[620px] h-[426px] w-[290px]">
+                <div class="hidden mb-[54px] md:flex gap-5 items-center">
+                    <p class="">Главная</p>
+                    <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
+                    <p class="">Кредит и рассрочка</p>
+                    <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
+                    <p class="">Семейный автомобиль</p>
+                </div>
+                <p class="text-[30px] md:text-[60px] font-bold">Семейный автомобиль</p>
+                <p class="text-[12px] md:w-[619px] md:text-[20px] font-bold">Программа “Семейный автомобиль” рассчитана
+                    на
+                    покупателей с одним и более
+                    несоверешеннолетними
+                    детьми в семье</p>
                 <div
-                    class="py-[4px] px-2.5 mb-[21px] mt-[8px] md:w-[168px] w-[131px] rounded-full font-bold md:text-[16px] text-[12px] bg-[#CA0100] text-white">
-                    Только до 10.10.21
+                    class="bg-[#CA0100] mt-[97px] rounded-full pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center gap-[6px] font-bold text-white">
+                    <p class="text-[25px] md:text-[68px]">от 1,9%</p>
+                    <p class="text-[10px] md:text-[20px]">По льготной <br> ставке</p>
+                </div>
+                <div
+                    class="rounded-full mt-[17px] pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center mb-20 gap-[6px] font-bold">
+                    <p class="text-[25px] md:text-[68px]">-10%</p>
+                    <p class="text-[10px] md:text-[20px]">от стоимости <br>
+                        автомобиля</p>
                 </div>
             </div>
-            <div class="">
-                <div class="md:flex gap-7">
-                    <input type="text" placeholder="Ваше имя"
-                        class="mb-2.5 rounded-md pt-[21px] pb-6 pl-[15px] pr-[120px] bg-[#EFF0F0] border-[#E1E1E1] border-2 w-[250px]">
-                    <input type="text" placeholder="Ваше имя"
-                        class="mb-2.5 rounded-md pt-[21px] pb-6 pl-[15px] pr-[120px] bg-[#EFF0F0] border-[#E1E1E1] border-2 w-[250px]">
-                    <button
-                        class="mb-2.5 rounded-md bg-[#CA0100] font-bold px-[11px] py-[17px] text-white border-[#E1E1E1] border-2 w-[250px]">
-                        Получить предложение</button>
+            <div
+                class="hidden md:block bg-[url(img-aba/back.png)] rounded-tr-[25px] rounded-tl-[25px] p-5 md:pt-5 md:pl-[190px] md:pb-10 md:px-[25px] text-white md:w-[1450px] bg-no-repeat md:h-[620px] h-[426px] w-[290px]">
+                <div class="hidden mb-[54px] md:flex gap-5 items-center">
+                    <p class="">Главная</p>
+                    <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
+                    <p class="">Кредит и рассрочка</p>
+                    <img src="img-aba/Vector.png" class="w-[8px] h-[8px]">
+                    <p class="">Семейный автомобиль</p>
                 </div>
-                <p class="text-[#C2C2C4] md:text-[#737373] md:text-[13px] text-[10px]">Нажимая кнопку “Получить
-                    предложение” Вы даете согласие
+                <p class="text-[30px] md:text-[60px] font-bold">Семейный автомобиль</p>
+                <p class="text-[12px] md:w-[619px] md:text-[20px] font-bold">Программа “Семейный автомобиль” рассчитана
                     на
-                    обработку своих персональных
-                    данных</p>
+                    покупателей с одним и более
+                    несоверешеннолетними
+                    детьми в семье</p>
+                <div
+                    class="bg-[#CA0100] md:mt-8 mt-[50px] rounded-full pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center gap-[6px] font-bold text-white">
+                    <p class="text-[25px] md:text-[68px]">от 1,9%</p>
+                    <p class="text-[10px] md:text-[20px]">По льготной <br> ставке</p>
+                </div>
+                <div
+                    class="rounded-full mt-[17px] pl-[13px] md:w-[412px] w-[177px] pr-[6px] py-[9px] flex items-center mb-20 gap-[6px] font-bold">
+                    <p class="text-[25px] md:text-[68px]">-10%</p>
+                    <p class="text-[10px] md:text-[20px]">от стоимости <br>
+                        автомобиля</p>
+                </div>
+            </div>
+        </div>
+        <div class="md:px-[100px]">
+            <div class="p-5 rounded-[25px] border bg-white border-[#E1E1E1] md:py-[34px] md:px-[42px] md:flex mb-10">
+                <div class="mr-[100px]">
+                    <p class="text-[20px] md:text-[24px] font-black">Получите <br>
+                        специальную цену</p>
+                    <div
+                        class="py-[4px] px-2.5 mb-[21px] mt-[8px] md:w-[168px] w-[131px] rounded-full font-bold md:text-[16px] text-[12px] bg-[#CA0100] text-white">
+                        Только до 10.10.21
+                    </div>
+                </div>
+                <div class="">
+                    <div class="md:flex gap-7">
+                        <input type="text" placeholder="Ваше имя"
+                            class="mb-2.5 rounded-md pt-[21px] pb-6 pl-[15px] pr-[120px] bg-[#EFF0F0] border-[#E1E1E1] border-2 w-[250px]">
+                        <input type="text" placeholder="Ваше имя"
+                            class="mb-2.5 rounded-md pt-[21px] pb-6 pl-[15px] pr-[120px] bg-[#EFF0F0] border-[#E1E1E1] border-2 w-[250px]">
+                        <button
+                            class="mb-2.5 rounded-md bg-[#CA0100] font-bold px-[11px] py-[17px] text-white border-[#E1E1E1] border-2 w-[250px]">
+                            Получить предложение</button>
+                    </div>
+                    <p class="text-[#C2C2C4] md:text-[#737373] md:text-[13px] text-[10px]">Нажимая кнопку “Получить
+                        предложение” Вы даете согласие
+                        на
+                        обработку своих персональных
+                        данных</p>
+                </div>
+            </div>
+            <div class="mb-[60px]">
+                <h1 class="text-[30px] md:text-[40px] font-bold mb-10 md:mb-[30px] text-center">Преимущества программы
+                </h1>
+                <div class="md:flex grid items-center grid-cols-2">
+                    <div class="flex-col flex md:w-[300px] items-center">
+                        <img src="img-aba/hand-0.png">
+                        <p class="text-black font-medium text-center"> от 0%</p>
+                        <p class="w-[130px] md:w-[140px] text-center text-[#737373] text-[12px]">Первоначальный взнос
+                        </p>
+                    </div>
+                    <div class="flex-col flex md:w-[300px] items-center">
+                        <img src="img-aba/phone-call.png">
+                        <p class="text-black font-medium text-center"> от 0%</p>
+                        <p class="w-[130px] md:w-[140px] text-center text-[#737373] text-[12px]">Первоначальный взнос
+                        </p>
+                    </div>
+                    <div class="flex-col flex md:w-[300px] items-center">
+                        <img src="img-aba/hand-1,9.png">
+                        <p class="text-black font-medium text-center"> от 0%</p>
+                        <p class="w-[130px] md:w-[140px] text-center text-[#737373] text-[12px]">Первоначальный взнос
+                        </p>
+                    </div>
+                    <div class="flex-col flex md:w-[300px] items-center">
+                        <img src="img-aba/shaking.png">
+                        <p class="text-black"> от 0%</p>
+                        <p class="w-[140px] text-center text-[#737373] text-[12px]">Первоначальный взнос</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-[#EFF0F0] relative md:flex justify-between p-5 mb-5 md:pt-[45px] md:pb-[18px] md:pl-20 md:pr-10 rounded-[25px]">
+                <div class="">
+                    <p class="text-[30px] font-bold mb-[13px]">Ваш будущий автомобиль</p>
+                    <label for="options" class="mb-[10px] relative block w-64">
+                        <select id="options"
+                            class="appearance-none w-full md:w-[370px]  border border-[#E1E1E1] rounded-lg bg-[#fff] px-3 py-[23px] cursor-pointer focus:outline-none">
+                            <option selected>Марка</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                        <span class="absolute right-3 md:right-[-80px] top-3 text-gray-500">
+                            <img src="img-aba/pointing 2.png" class="ml-[200px] mt-[20px]">
+                        </span>
+                    </label>
+                    <label for="options" class="mb-[10px] relative block w-64">
+                        <select id="options"
+                            class="appearance-none w-full md:w-[370px]  border border-[#E1E1E1] rounded-lg bg-[#fff] px-3 py-[23px] cursor-pointer focus:outline-none">
+                            <option selected>Марка</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                        <span class="absolute right-3 md:right-[-80px] top-3 text-gray-500">
+                            <img src="img-aba/pointing 2.png" class="ml-[200px] mt-[20px]">
+                        </span>
+                    </label>
+                    <label for="options" class="mb-[10px] relative block w-64">
+                        <select id="options"
+                            class="appearance-none w-full md:w-[370px]  border border-[#E1E1E1] rounded-lg bg-[#fff] px-3 py-[23px] cursor-pointer focus:outline-none">
+                            <option selected>Марка</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                        <span class="absolute right-3 md:right-[-80px] top-3 text-gray-500">
+                            <img src="img-aba/pointing 2.png" class="ml-[200px] mt-[20px]">
+                        </span>
+                    </label>
+
+                </div>
+                <div class="">
+                    <p class="text-[18px] text-[#737373] top-[58px] w-[270px]">Выберите марку и модель
+                        автомобиля</p>
+                    <img src=" img-aba/covered.png" alt="">
+                </div>
+            </div>
+            <div class="bg-[#EFF0F0] relative p-5 mb-5 md:pt-[45px] md:pb-[52px] md:pl-20 md:pr-10 rounded-[25px]">
+                <div class="justify-between md:flex mb-[53px]">
+                    <div class="">
+                        <p class="text-[30px] font-bold">Купить в кредит</p>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <p class="">Cрок кредита, месяцев</p>
+                                <p class="">36 мес.</p>
+                            </div>
+                            <div class="">
+                                <input type="range" min="0" max="200" value="200" id="slider"
+                                    class="md:w-[500px] w-[100%] slider">
+                                <div class="flex justify-between">
+                                    <span>6</span>
+                                    <span>12</span>
+                                    <span>24</span>
+                                    <span>36</span>
+                                    <span>48</span>
+                                    <span>60</span>
+                                    <span>72</span>
+                                    <span>84</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="md:flex md:mt-0 my-[30px]">
+                            <div class="flex items-center gap-4">
+                                <label class="relative flex items-center cursor-pointer">
+                                    <input type="checkbox" checked class="peer hidden">
+                                    <div
+                                        class="p-[5px] pb-[7px] bg-red-600 peer-checked:bg-white rounded-md flex items-center justify-center duration-300">
+                                        ✔
+                                    </div>
+                                </label>
+                                <p class="w-[233px]">Скидка от руководителя -10% от цены авто</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <label class="relative flex items-center cursor-pointer">
+                                    <input type="checkbox" checked class="peer hidden">
+                                    <div
+                                        class="p-[5px] pb-[7px] bg-red-600 peer-checked:bg-white rounded-md flex items-center justify-center text-white">
+                                        ✔
+                                    </div>
+                                </label>
+                                <p class="w-[233px]">Акция “Выгодный кредит”
+                                    Скидка 30 000 ₽ </p>
+                            </div>
+                        </div>
+                        <div class="py-[23px]  bg-white border-2 pl-[18px] rounded-[6px] border-[#E1E1E1]">
+                            <p class="w-[186px]">Первоначальный взнос</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <p class=" text-[14px] md:text-[16px]">Выберите банк</p>
+                    <div class="md:grid-cols-7 grid grid-cols-2 gap-2.5 md:gap-[25px]">
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/sber.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/BTB.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/alpha.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/sber.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/BTB.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/alpha.png">
+                        </div>
+                        <div class="py-[15px] flex items-center justify-center px-[21px] bg-[white]">
+                            <img src="img-aba/sber.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#EFF0F0] flex py-[23px]  rounded-[25px]">
+                <p class="text-[20px] font-bold md:text-[] mr-[] text-[#ADADB0]">Программа Trade-in</p>
+                <button class="bg-[#CA0100] text-white px-[6px] py-[9px] rounded-md">Добавить</button>
+            </div>
+
+            <div>
+                <h1 class="font-black text-[30px] my-[20px] ml-[10px]">Отзывы</h1>
+                <div class="flex justify-around">
+                    <div class="md:w-[33%]">
+                        <div>
+                            <img src="./sobir-img/Rectangle 102.png" alt="" class="absolute">
+                            <img src="./sobir-img/Group 673 (1).png" alt="" class="absolute z-20 ml-[110px] mt-[80px]">
+                            <img src="./sobir-img/Group 1859.png" alt="" class="absolute z-30 ml-[160px] mt-[120px]">
+                        </div>
+                        <div class="bg-gray-200 px-[10px] rounded-t-3xl">
+                            <h1 class="pt-[300px] font-bold my-[10px]">Сергей Васильев</h1>
+                            <p class="text-gray-500">«Я нахожусь в салоне ALTERA, всем советую, хороший коллектив,
+                                добрые люди,
+                                приветствуют, это не обман, вам гарантия 100 % точно, чисто от меня, приезжайте! Мы
+                                приехали
+                                приобрести автомобиль в салон ALTERA...</p>
+                            <select name="" id="" class="w-[300px] p-[8px] my-[10px] bg-gray-400 rounded-xl">
+                                <option value="">Подробнее</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-[33%] md:block xs:hidden">
+                        <div>
+                            <img src="./sobir-img/Rectangle 102.png" alt="" class="absolute">
+                            <img src="./sobir-img/Group 673 (1).png" alt="" class="absolute z-20 ml-[110px] mt-[80px]">
+                            <img src="./sobir-img/Group 1859.png" alt="" class="absolute z-30 ml-[160px] mt-[120px]">
+                        </div>
+                        <div class="bg-gray-200 px-[10px] rounded-t-3xl">
+                            <h1 class="pt-[300px] font-bold my-[10px]">Сергей Васильев</h1>
+                            <p class="text-gray-500">«Я нахожусь в салоне ALTERA, всем советую, хороший коллектив,
+                                добрые люди,
+                                приветствуют, это не обман, вам гарантия 100 % точно, чисто от меня, приезжайте! Мы
+                                приехали
+                                приобрести автомобиль в салон ALTERA...</p>
+                            <select name="" id="" class="w-[300px] p-[8px] my-[10px] bg-gray-400 rounded-xl">
+                                <option value="">Подробнее</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-[33%] md:block xs:hidden">
+                        <div>
+                            <img src="./sobir-img/Rectangle 102.png" alt="" class="absolute">
+                            <img src="./sobir-img/Group 673 (1).png" alt="" class="absolute z-20 ml-[110px] mt-[80px]">
+                            <img src="./sobir-img/Group 1859.png" alt="" class="absolute z-30 ml-[160px] mt-[120px]">
+                        </div>
+                        <div class="bg-gray-200 px-[10px] rounded-t-3xl">
+                            <h1 class="pt-[300px] font-bold my-[10px]">Сергей Васильев</h1>
+                            <p class="text-gray-500">«Я нахожусь в салоне ALTERA, всем советую, хороший коллектив,
+                                добрые люди,
+                                приветствуют, это не обман, вам гарантия 100 % точно, чисто от меня, приезжайте! Мы
+                                приехали
+                                приобрести автомобиль в салон ALTERA...</p>
+                            <select name="" id="" class="w-[300px] p-[8px] my-[10px] bg-gray-400 rounded-xl">
+                                <option value="">Подробнее</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -184,7 +511,7 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
                         <label for="options" class="relative block w-64">
                             <select id="options"
                                 class="appearance-none text-white w-full border border-gray-300 rounded-lg bg-[#595D60] px-3 py-2 cursor-pointer focus:outline-none">
-                                <option selected disabled>Select an option</option>
+                                <option selected>Москва</option>
                                 <option>Option 1</option>
                                 <option>Option 2</option>
                                 <option>Option 3</option>
@@ -218,5 +545,21 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
         </div>
     </footer>
 </body>
+<script>
+    const slider = document.getElementById("slider");
+    const valueDisplay = document.getElementById("slider-value");
+
+    slider.addEventListener("input", (e) => {
+        const value = e.target.value;
+        valueDisplay.textContent = value;
+
+        // Update the background to fill the track
+        slider.style.background = `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${value}%, #d1d5db ${value}%, #d1d5db 100%)`;
+    });
+
+    // Initial background set on page load
+    slider.style.background = `linear-gradient(to right, #3b82f6 0%, #3b82f6 50%, #d1d5db 50%, #d1d5db 100%)`;
+
+</script>
 
 </html>
