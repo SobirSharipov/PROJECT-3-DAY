@@ -1450,8 +1450,16 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1890,6 +1898,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#f5f5f5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(img-aba\/back\.png\)\] {
@@ -2722,6 +2735,10 @@ video {
 
 .hover\:border-b:hover {
   border-bottom-width: 1px;
+}
+
+.hover\:bg-\[\#c7c7c7ce\]:hover {
+  background-color: #c7c7c7ce;
 }
 
 .hover\:shadow-\[0px_0px_5px\#CA0100\]:hover {
@@ -3779,5 +3796,16 @@ video {
 
   .md\:filter {
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+}
+
+@media (min-width: 1280px) {
+  .lg\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .lg\:text-\[16px\] {
+    font-size: 16px;
   }
 }
