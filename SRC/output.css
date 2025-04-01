@@ -2741,6 +2741,10 @@ video {
   background-color: #c7c7c7ce;
 }
 
+.hover\:bg-\[\#868282ce\]:hover {
+  background-color: #868282ce;
+}
+
 .hover\:shadow-\[0px_0px_5px\#CA0100\]:hover {
   --tw-shadow: 0px 0px 5px#CA0100;
   --tw-shadow-colored: 0px 0px 5px#CA0100 var(--tw-shadow-color);
